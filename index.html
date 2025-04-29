@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="styles.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML CSS WEBSITE</title>
+</head>
+<body>
+
+<header>
+    <img id="logo" alt="freeCodeCamp" src="ambertech.png">
+    
+    <nav>
+      <ul>
+        <li><a href="#student-info">ABOUT ME</a></li>
+        <li><a href="#html-questions">EXPLORE</a></li>
+        <li><a href="#css-questions">HOME PAGE</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<h1 class="amber">Design With AmberTech <br>And Make The Best Thumbnails <br>Ever!</h1> 
+
+<div class="gallery">
+    <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg">
+    <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/2.jpg">
+    <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/3.jpg">
+    
+  </div>
+  <hr>
+  <br>
+  <br> <br><h3>Try One OF These!</h3>
+  <div class="gallery2">
+    <img src="payment.png">
+    <img src="payment2.png">
+    <img src="payment3.png">
+   
+
+  </div>
+  <div id="payment-plans" class="about-section">
+    <h2>Payment Plans</h2>
+    <p>We offer different payment options for everyone! Choose what works best for you. Simple, safe, and made just for AmberTech fans.</p>
+</div>
+ <li><a href="#" id="payment-link">PAYMENT PLANS</a></li>
+ <script>
+    const paymentLink = document.getElementById("payment-link");
+    const paymentSection = document.getElementById("payment-plans");
+  
+    paymentLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      if (paymentSection.style.maxHeight) {
+        paymentSection.style.maxHeight = null;
+      } else {
+        paymentSection.style.maxHeight = paymentSection.scrollHeight + "px";
+        paymentSection.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  </script>
+  
+</body>
+</html>
